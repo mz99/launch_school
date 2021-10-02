@@ -148,6 +148,7 @@ loop do
 
   puts determine_winner(cards_values(player_cards), cards_values(dealer_cards))
 
-  puts "Game over! Thanks for playing Twenty-one!"
-  break
+  puts "Press 'q' to quit the game, any other key to play again!"
+  response = gets.chomp.downcase
+  break if response.start_with?('q')
 end
